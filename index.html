@@ -739,27 +739,43 @@ footer .logo { font-family: var(--fonte-titulo); font-style: italic; font-size: 
      CONTATO — altere e-mail e links das redes sociais
      ============================================================ -->
 <section class="contato" id="contato">
-  <div class="contato-header reveal">
-    <div class="label-secao">Contato</div>
-    <h2 class="titulo-secao">Vamos <em>conversar?</em></h2>
-    <p style="color: var(--cor-texto-claro); max-width: 400px; margin: 0 auto;">Adoraria ouvir sobre o seu projeto. Me envie uma mensagem!</p>
-  </div>
-  <div class="contato-inner reveal">
-    <form onsubmit="event.preventDefault(); alert('Mensagem enviada! ✦')">
-      <div class="form-group">
-        <label class="form-label" for="nome">Seu nome</label>
-        <input class="form-input" type="text" id="nome" placeholder="Como posso te chamar?">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="email">E-mail</label>
-        <input class="form-input" type="email" id="email" placeholder="seu@email.com">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="mensagem">Mensagem</label>
-        <textarea class="form-textarea" id="mensagem" placeholder="Me conte sobre o seu projeto..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Enviar mensagem ✦</button>
-    </form>
+ <div class="contato-header reveal">
+  <div class="label-secao">Contato</div>
+  <h2 class="titulo-secao">Vamos <em>conversar?</em></h2>
+  <p style="color: var(--cor-texto-claro); max-width: 400px; margin: 0 auto;">
+    Adoraria ouvir sobre o seu projeto. Me envie uma mensagem!
+  </p>
+</div>
+
+<div class="contato-inner reveal">
+  <form action="https://formsubmit.co/claramunhoz147@gmail.com" method="POST">
+    
+    <!-- Configurações ocultas -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nova mensagem do seu portfólio! ✨">
+    <input type="hidden" name="_next" value="https://seusite.vercel.app">
+
+    <div class="form-group">
+      <label class="form-label">Seu nome</label>
+      <input class="form-input" type="text" name="nome" placeholder="Como posso te chamar?" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">E-mail</label>
+      <input class="form-input" type="email" name="email" placeholder="seu@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Mensagem</label>
+      <textarea class="form-textarea" name="mensagem" placeholder="Me conte sobre o seu projeto..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+      Enviar mensagem ✦
+    </button>
+
+  </form>
+</div>
 
     <!-- REDES SOCIAIS: altere href com seus links reais -->
    <div class="contato-social">
